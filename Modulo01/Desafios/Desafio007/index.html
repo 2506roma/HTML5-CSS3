@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexível</title>
+</head>
+<style>
+    div{
+        text-align: center;
+    }
+</style>
+<body>
+    <div>
+    <h1>Imagem Flexível</h1>
+    <p>Você esta vendo a imagem completa ? Experimente ampliar o tamanho da sua janela para aproveitar melhor a experiência &#x1F609</p>
+    <!--<img src="paisagem.media..webp" alt="">-->
+    <picture>
+        <source media="(max-width: 750px )" srcset="paisagem.pequeno..webp" type="image/png">
+        <source media="(max-width: 1050px )" srcset="paisagem.media..webp" type="image/png">
+        <source media="(max-width: 1300px )" srcset="paisagem.grande..webp" type="image/png">
+        <img src="paisagem.grande.max.webp" alt="Imagem dinâmica">
+    </picture>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image: linear-gradient( to right, #077003c4, #5aa357d8, #55c451);
+        }
+        main{
+            
+            background-color: white;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            width: 700px;
+            height: 500px;
+            box-shadow: 10px 10px 10px turquoise;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            color: rgb(92, 92, 92);
+        }
+        dt{
+            color: rgb(116, 113, 113);
+        }
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+
+        }
+        a:hover{
+            text-decoration: underline;
+            color: rgba(255, 0, 0, 0.589);
+        }
+        a::after{
+            content: '[Link]';
+            font-weight: normal;
+            text-decoration: none;
+            color: darkgray;
+        }
+        a:active{
+            color: black;
+        }
+        .especial::after{
+            content: '[Filho]';
+            color: darkgrey;
+         
+            
+        }
+        p{
+            text-align: right;
+            text-decoration: underline;
+        }
+    </style>
+<body>
+    <main>
+
+    <h1>Personalizando Links</h1>
+    
+    <ul>
+        <li><a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank" rel="external">Canal do Curso em Video</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" rel="external">Site Curso em Video</a></li>
+        <li><a href="https://github.com/2506roma" target="_blank" rel="external">GitHub</a></li>
+    </ul>
+
+    <h2>Códigos</h2>
+
+    <dl>
+        <dt>Pseudo-Class</dt>
+        <dd>São Palavras que define estados de elementos dentro da HTML.</dd>
+        <br>
+        <dt>Pseudo-element</dt>
+        <dd>Pode Agir nas Class no elemento e na div mexe no conteudo do elemento.</dd>
+    </dl>
+
+    <h2 style="text-align: center;">Seletores Personalizados</h2>
+
+    <ul>
+        <li># = id</li>
+        <li>. = Class</li>
+        <li>: = Pseudo-Class</li>
+        <li>:: = Pseudo-Element</li>
+        <li class="especial"> > = Clildren </li>
+    </ul>
+    <p><a href="https://www.estudonauta.com/licao/capitulo-15-aula-4-css-pseudo-element/" target="_blank" rel="external">Capítulo 15 Aula 4 – CSS pseudo-element</a></p>
+    </main>
+</body>
+</html>
