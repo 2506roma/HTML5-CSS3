@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento verdical</title>
+</head>
+<style>
+    #container{
+        height: 92vh;
+        /* Viewport, tamanho do nosso duspositivo ou seja uma altura de 100vh corresponde a 100% da página total. */
+        padding: 10px;
+        
+        background-image: url('Imagens/target001.png');
+        background-color: lightskyblue;
+        background-size: 100% 100%;
+        /* tamanho Horizontal ou verdical */
+        position: relative ;
+
+
+    }
+    #conteudo{
+        height: 200px;
+        width: 400px;
+
+        background-image: url('Imagens/target001.png');
+        background-color: lightseagreen;
+        background-size: 100% 100%;
+         
+        position: absolute;
+        /* Possibilita o uso de left, right, top, bottom  */
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50% , -50%);
+        /* Permite modificar o espaço coordenado do modelo de fomatação, tamanho ajustado e ubclinao de acoro com os valores definidos. */
+        
+    }
+</style>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    <!-- necessário ter um conteuno dentro de um container -->
+</body>
+</html>
