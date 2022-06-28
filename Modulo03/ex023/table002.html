@@ -12,18 +12,42 @@
         font-family: Arial, Helvetica, sans-serif;
     }
     table{
-        width: 500px;
+        width: 600px;
         height: 1200px ;
         margin: auto;
         border-collapse: collapse;
-        
+        position: relative; /* Comportamento do site */
+    }
+    tbody > tr:nth-child(even){
+        /* par = even */
+        background-color: lightgrey;
+    }
+    tbody > tr:nth-child(odd){
+        /* Impar = odd */
+        background-color: white;
+    }
+    caption{
+        background-color: lightgrey;
+        color: rgba(0, 0, 0, 0.767);
+        font-weight: bolder;
+        font-size: 30px;
+        height: 50px;
+        padding: 10px;
     }
     th, tfoot{
         border:1px solid black;
         height: 80px;
         font-weight: bolder;
         color: white;
-        background-color: grey;
+        background-color: rgba(0, 0, 0, 0.74);
+
+    }
+    thead > tr > th{
+        /* Cabeçalho fixo para tabelhas grandes */
+
+        position: sticky;/* Colável ou Grudável */
+        top: 0; /* colando */
+        background-color: rgba(0, 0, 0, 0.74) ;
 
     }
     td{
@@ -42,12 +66,23 @@
     }
 </style>
 <body>
+    <!-- 
+        Caption  > Legenda
+         thead > Cabecalho
+                TR, TD, TH
+         tbody > Corpo
+                TR,TD, TH
+         tfood > Rodapé
+                TR,TD, TH
+    -->
+
     <table>
+        <caption>População federativa Brasileira</caption>
         <thead>
             <tr>
-                <th>Unidade federativa</th>
-                <th>População 2010</th>
-                <th>População 2021</th>
+                <th style="font-size: 25px;" scope="col">Unidade federativa</th>
+                <th style="width: 100px;">População 2010</th>
+                <th style="width: 100px;">População 2021</th>
             </tr>
         </thead>
         <tbody>
@@ -175,13 +210,11 @@
 
         <tfoot>
             <tr>
-                <td> Estados</td>
-                <td>População 2010</td>
-                <td>População 2021</td>
+                <th style="font-size: 25px;" scope="row"> Estados</th>
+                <th>População 2010</th>
+                <th>População 2021</th>
             </tr>
         </tfoot>
     </table>
-
-    
 </body>
 </html>
