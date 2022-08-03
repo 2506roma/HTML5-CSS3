@@ -9,20 +9,38 @@
 </head>
 <body>
     <h1>Teste de Formulário</h1>
-    <form action="cadastro.php" method="POST"></form>
+    <form action="cadastro.php" method="get" autocomplete="off">
+        <!-- Autocomplete  > Habilitar ou desabilitar caixa de sugestão-->
 
-    <p>
+
+     <p>
         <label for="iusu">Usuário: </label>
-        <input type="text" name="usu" id="iusu" required>
+        <input type="text" name="usu" id="iusu" required minlength="8" maxlength="15" size="15" placeholder="Nome do usuário" autocomplete="username">
+        <!-- required minlength/maxlength > minimo e maximo requerido "Obrigatorio" -->
+        <!-- size > tamanho da caixa -->
+        <!-- Placeholder > Dica na caixa -->
+        <!-- autocomplete="username" > Nome usuario -->
     </p>
        
     <p>
-        <label for="isen">Senha: </label>
-        <input type="password" name="sen" id="isen" required>
+        <label for="isen">Senha: </label> 
+        <input type="password" name="sen" id="isen" required minlength="8" size="15" placeholder="Senha usuário" autocomplete="new-password">
+        <!--required minlength > significa que é obrigatorio comprimento 8 letras -->
+        <!-- size > tamanho da caixa -->
+        <!-- Placeholder > Dica na caixa -->
+        <!-- autocomplete="new-password" > Nova senha -->
     </p>
     <p>
         <input type="submit" value="Enviar">
+        <!-- submit > enviar -->
+
         <input type="reset" value="Limpar">
-    </p>
+        <!-- reset > limpar -->
+
+    </p>   
+
+    </form>
+
+    
 </body>
 </html>
