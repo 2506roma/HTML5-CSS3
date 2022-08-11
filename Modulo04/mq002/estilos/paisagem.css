@@ -1,3 +1,7 @@
 @charset "UTF-8";
 
-/* Media Paisagem () */
+/* Media Paisagem (portrait) */
+
+body{
+    background-image: url(../imagens/cev-portrait.jpg);
+}
