@@ -19,17 +19,3 @@ h1{
     text-shadow: 2px 2px 0px #1526A7;
     padding: 10px;
 }
-@media screen and  (orientation: landscape){
-    body{
-        background-position: left bottom;
-       background-image: url(../imagens/cev-landscape.jpg);
-    
-    }
-}
-@media screen and (orientation: portrait) 
-{
-  body{
-      background-position: bottom;
-      background-image: url(../imagens/cev-portrait.jpg);
-  }
-}
