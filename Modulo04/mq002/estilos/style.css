@@ -12,9 +12,22 @@ html, body{
     height: 100vh;
     background-color: #233eff;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 h1{
     color: white;
     text-shadow: 2px 2px 0px #1526A7;
     padding: 10px;
+}
+@media (min-width: 330px){
+    body{
+        background-position: left bottom;
+       background-image: url(../imagens/cev-landscape.jpg);
+    }
+}
+@media (max-width: 329px){
+  body{
+      background-position: bottom;
+      background-image: url(../imagens/cev-portrait.jpg);
+  }
 }
