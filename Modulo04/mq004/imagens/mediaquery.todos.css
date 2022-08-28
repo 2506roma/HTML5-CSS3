@@ -1,3 +1,82 @@
 @charset "UTF-8";
 
 /* Todas as versões */
+/* 
+Typical Device Breakpoints 
+--------------------------
+Pequenas Telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes Telas: acima de 1200px
+*/
+
+@media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-image: url(back-print.jpg);
+    }
+    main{
+        border: 2px solid black;
+    }
+    main::after{
+        content: 'Essa Impressão foi feita por Dev https://github.com/2506roma';
+        
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    img#tablet {display: none;}
+    img#impressora {display: block;}
+    img#TV {display: none;}
+    img#PC {display: none;}
+    img#phone {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+   /* TABLET */
+    body{
+        background: url(back-tablet.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    img#tablet {display: block;}
+    img#impressora {display: none;}
+    img#TV {display: none;}
+    img#PC {display: none;}
+    img#phone {display: none;}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /* DESKTOP */
+    body{
+        background: url(back-pc.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    img#tablet {display: none;}
+    img#impressora {display: none;}
+    img#TV {display: none;}
+    img#PC {display: block;}
+    img#phone {display: none;}
+}
+@media screen and (min-width: 1200px) {
+    /* TV */
+    body{
+        background: url(back-tv.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    main{
+        background: rgba(255, 255, 255, 0.295);
+    }
+    img#tablet {display: none;}
+    img#impressora {display: none;}
+    img#TV {display: block;}
+    img#PC {display: none;}
+    img#phone {display: none;}
+    
+}
