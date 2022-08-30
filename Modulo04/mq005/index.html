@@ -6,38 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="Menures.css">
-    <title>Menu responsivo</title>
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <title>Media Query</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <h1>Menu Responsivo</h1>
+        <h1>Media Query</h1>
         <i id="burguer" class= "material-icons" onclick="clickMenu()">menu</i>
         <menu id="itens">
             <ul>
-                <li><a href="#01">Opcão 01</a></li>
-                <li><a href="#">Opcão 02</a></li>
-                <li><a href="#">Opcão 03</a></li>
-                <li><a href="#">Opcão 04</a></li>
-                <li><a href="#">Opcão 05</a></li>
-                <li><a href="#">Opcão 06</a></li>
+                <li><a href="#query">Oque é Media Query?</a></li>
+                <li><a href="#prioridade">Prioridade na Media Query</a></li>
+                <li><a href="#breakpoint">Breakpoint</a></li>
+                <li><a href="#paisagem">Orientação: Retrato / Paisagem</a></li>
+                <li><a href="#ocultar">Ocultar elementos</a></li>
             </ul>
         </menu>
     </header>
     <main>
         <article>
-            <h2>Testando Media Queries</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugit sed itaque eum ipsum voluptas adipisci necessitatibus incidunt eveniet consequatur, illo quaerat explicabo perspiciatis error quod possimus fuga nesciunt, earum veritatis. Necessitatibus enim consequatur, assumenda suscipit eos quod culpa maxime cumque ab vero ducimus doloremque a fuga facere quas, debitis voluptate sunt. Odio voluptates omnis deserunt magnam eaque nobis, suscipit veritatis, hic dolores ea earum qui sequi quibusdam fugit. Repellendus ex soluta ullam rerum similique illo ipsum, neque, vitae aspernatur voluptas atque necessitatibus tempore sequi? Rerum sit expedita cumque earum iste nulla ut dicta. Odio nam dolores repellat nisi? Iusto.</p>
+            <h2> <a name="query">Significado de Media Query</a> </h2>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor voluptates reprehenderit facilis exercitationem animi, porro iure veritatis qui debitis a dolorem officiis placeat ipsum unde minus quaerat sapiente deserunt eaque ipsam neque odio. Placeat atque voluptates doloribus quaerat eligendi maxime a quod, dolores eum quo error quam tenetur facere totam dolorem dolorum voluptatem asperiores nulla. Cumque libero quos aliquam ut! Odio officia, iure quis amet error maiores? Vitae modi hic necessitatibus, reiciendis asperiores nesciunt tempora similique dignissimos neque optio impedit excepturi maiores omnis nisi, libero labore voluptatibus, numquam harum quod incidunt mollitia. Explicabo dicta esse illum laudantium veritatis a aspernatur.</p>
+            <p>Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si</p>
 
-            <h2><a name="01">Opção 01</a></h2>
-            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima aspernatur deleniti, et aut numquam expedita dolor alias. Perferendis sint nesciunt quis iure nihil amet ad. Nobis possimus fugiat, repellendus nostrum vel, sequi, doloribus repudiandae cum tempora beatae ipsa similique. Fugit debitis rerum eveniet quisquam adipisci pariatur excepturi, dolor voluptatem praesentium quia ipsum a odit suscipit at! Natus cupiditate, ab reiciendis sed culpa cumque accusantium non perferendis recusandae et omnis nisi modi repellat delectus tempore alias veniam quisquam. Architecto rerum ea quisquam, doloribus harum officiis commodi excepturi odit, cumque eius dolorum atque eos, facilis ipsum tempora. Doloremque mollitia dolores provident possimus hic quo sequi sapiente consequuntur quod delectus. Repellat mollitia voluptatem voluptatum? Temporibus architecto voluptates incidunt culpa rem laboriosam nesciunt, illo iusto quidem voluptate nostrum error hic perspiciatis itaque provident totam. Nam sed officiis fugit enim. Id atque eligendi, reprehenderit in expedita eum ad natus dolore sunt itaque esse similique! Dolorum.</p>
+            <h2><a name="prioridade">Sempre projete para dispositivos móveis primeiro</a></h2>
+
+            <p> Mobile First significa projetar para dispositivos móveis antes de projetar para desktop ou qualquer outro dispositivo (isso fará com que a página seja exibida mais rapidamente em dispositivos menores).</p>
+            <p>Isso significa que devemos fazer algumas alterações em nosso CSS.</p>
+            <p>Em vez de alterar estilos quando a largura for menor que 768px, devemos alterar o design quando a largura for maior que 768px. Isso tornará nosso design Mobile First:</p>
+
+            <h2><a name="breakpoint">Outro ponto de interrupção</a></h2>
+            <p>Você pode adicionar quantos pontos de interrupção desejar.</p>
+            <p>Também vamos inserir breakpoint entre tablets e celulares.</p>
+            <p>Fazemos isso adicionando mais uma consulta de mídia (em 600px) e um conjunto de novas classes para dispositivos maiores que 600px (mas menores que 768px):</p>
+
+            <h2><a name="paisagem">Orientação Retrato / Paisagem</a></h2>
+
+            <p>As consultas de mídia também poem ser usadas para alterar o layout de uma página dependendo da orientação do navegador.</p>
+            <p>Você pode ter um conjunto de propriedades CSS que só serão aplicadas quando a janela do navegador for mais larga que sua altura, a chamada orientação "Paisagem".</p>
+
+            <h2><a name="ocultar">Ocultar elementos com consultas de mídia</a></h2>
+
+            <p>Outro uso comum de consultas de mídia é ocultar elementos em diferentes tamanhos de tela:</p>
+            <p class="espaco"><mark>Estarei escondido em telas pequenas.</mark> </p>
         </article>
         <footer>
-            <p>Menu responsivo</p>
+        <p id="footer">Informações retiradas do Site  <a href="https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp" target="_blank" >W3c</a></p>
         </footer>
     </main>
     <script>
+        function mudouTamanho(){
+            if(window.innerWidth >= 768){
+                itens.style.display = 'block'
+            } else{
+                itens.style.display = 'none'
+            }
+
+        }
         function clickMenu() {
             if(itens.style.display == 'block'){
                itens.style.display = 'none'
@@ -46,5 +71,6 @@
             }
         }
     </script>
+    
 </body>
 </html>
