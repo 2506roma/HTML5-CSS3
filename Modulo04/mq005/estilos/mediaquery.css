@@ -1,5 +1,6 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
 /* 
 typical Device Breakpoints
 --------------------------
@@ -10,9 +11,65 @@ Desktop: 992px até 1200px
 Grandes telas: acima de 1200px
 */
 
-@media screen and (min-width: 768px ) {
+
+@media screen and (min-width: 768px ) and (max-width: 992px) {
     body{
-        background: url(../Imagens/back-tablet.jpg);
+        background: url(../Imagens/back-tablet.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: rgba(179, 179, 179, 0.377);
+    }
+    #burguer{
+        color: white;
+        background-color: rgba(128, 128, 128, 0.616);
+    }
+    h1, a, main, mark{
+        font-family: 'EB Garamond', serif;
+        background-color: rgba(179, 179, 179, 0.377);
+    }
+    menu > ul > li> a{
+        background-color: rgba(179, 179, 179, 0.377);
+    }
+    menu > ul > li> a:hover{
+        background-color: rgba(128, 128, 128, 0.616) ;
+    }
+
+    p{
+        font-family: 'EB Garamond', serif;
+
+    }
+    a{
+        font-size: 20px;
+    }
+    h2 > a{
+        text-decoration: none;
+        background-color: rgba(179, 179, 179, 0);
+    }
+    
+}
+@media screen and  (min-width: 992px ) and (max-width: 1200px){
+    body{
+        background: url(../papel-de-parede-estrada-flores-arvores-floresta-rosa-gg428-papel-de-parede-estrada.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+    }
+    h1, main{
+        background-color: #f2cbbd8e;
+        color: rgb(0, 0, 0);
+    }
+    menu > ul > li > a{
+        display: block;
+        border-radius: 10px;
+        padding: 7px;
+        border: none;
+        background-color: #f2cbbd8e;
+    }
+    a:hover{
+        background-color: rgba(255, 255, 255, 0.568);
+    }
+    menu > ul{
+        background-color:#f2cbbd8e;
     }
     i#burguer{
         display: none;
@@ -26,5 +83,26 @@ Grandes telas: acima de 1200px
     main{
         width: 768px;
     }
+    
+}
+@media screen and (min-width: 1200px) {
+    body{
+        background: url(../Imagens/back-tv.jpg) no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    i#burguer{
+        display: none;
+    }
+    menu{
+        display: block;
+    }
+    menu > ul > li{
+        display: inline-block;
+    }
+    main{
+        width: 768px;
+    }
+    
     
 }
